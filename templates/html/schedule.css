@@ -9,7 +9,7 @@
   --font-ui: Arimo, "Liberation Sans", Arial, sans-serif;
   --lw: 150px;  /* row head column */
   --cw: 46px;   /* hour column */
-  --hh: 90px;   /* header height */
+  --hh: 60px;   /* header height */
   --rh: 44px;   /* row height */
 }
 
@@ -34,14 +34,14 @@ tbody tr:last-child > * { border-bottom: 0; }
 col.c-head { width: var(--lw); }
 col.c-hour { width: var(--cw); }
 
-.corner { height: var(--hh); text-align: left; padding: 10px 12px; font-size: 15px; font-weight: 700; vertical-align: middle; }
+.corner { height: var(--hh); text-align: left; padding: 13px 12px 10px; font-size: 15px; font-weight: 700; vertical-align: middle; }
 th.hourh { height: var(--hh); vertical-align: bottom; text-align: center; font-weight: 400; }
 th.hourh span {
   display: inline-block; writing-mode: vertical-rl; transform: rotate(180deg);
-  padding: 10px 0; font-size: 14px; line-height: 1; white-space: nowrap;
+  padding: 8px 0; font-size: 14px; line-height: 1; white-space: nowrap;
 }
 
-th.rowhead { height: var(--rh); text-align: left; padding: 0 12px; font-size: 15px; font-weight: 700; white-space: nowrap; }
+th.rowhead { height: var(--rh); text-align: left; padding: 3px 12px 0; font-size: 15px; font-weight: 700; white-space: nowrap; }
 th.rowhead .sub { display: block; margin-top: 3px; font-size: 13px; font-weight: 400; color: var(--muted); }
 table.days { --rh: 54px; }
 
