@@ -1,0 +1,39 @@
+name: Помилка
+description: Помилка в скриптах, workflow чи рендері картинок.
+title: "[Помилка] "
+labels: ["bug"]
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: Що сталося
+      description: Опишіть помилку коротко.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Як відтворити
+      placeholder: |
+        1. npm run fetch
+        2. npm run render
+        3. ...
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Що мало статися
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Логи
+      description: Вивід команди або посилання на запуск GitHub Actions.
+      render: shell
+  - type: input
+    id: env
+    attributes:
+      label: Середовище
+      placeholder: "macOS 15, Node.js 24.1, Playwright 1.64"

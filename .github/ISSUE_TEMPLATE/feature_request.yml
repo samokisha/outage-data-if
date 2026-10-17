@@ -1,0 +1,27 @@
+name: Пропозиція
+description: Ідея нової функції чи покращення.
+title: "[Пропозиція] "
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Яку проблему це вирішує
+    validations:
+      required: true
+  - type: textarea
+    id: solution
+    attributes:
+      label: Як це має працювати
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Які альтернативи ви розглядали
+  - type: checkboxes
+    id: compat
+    attributes:
+      label: Сумісність
+      options:
+        - label: Зміна не ламає формат data/ivano-frankivsk.json, сумісний з outage-data-ua.

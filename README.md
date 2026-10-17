@@ -222,6 +222,13 @@ scripts/publish_images.sh <remote>         # опублікувати гілку
 
 ---
 
+## Участь у проєкті
+
+- Як долучитися: [CONTRIBUTING.md](CONTRIBUTING.md).
+- Розбіжність з графіком обленерго: [створіть issue](https://github.com/samokisha/outage-data-if/issues/new/choose).
+- Вразливість: [SECURITY.md](SECURITY.md).
+- [Кодекс поведінки](CODE_OF_CONDUCT.md).
+
 ## Подяки
 
 Ідея, схема JSON і підхід до рендеру взяті з [Baskerville42/outage-data-ua](https://github.com/Baskerville42/outage-data-ua) (MIT). Цей репозиторій — окремий проєкт, не форк.

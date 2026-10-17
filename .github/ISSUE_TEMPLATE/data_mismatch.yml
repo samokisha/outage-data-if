@@ -1,0 +1,49 @@
+name: Розбіжність у даних
+description: Графік у JSON чи на картинці не збігається з сайтом обленерго.
+title: "[Дані] Черга <X.Y>, <ДД.ММ.РРРР>"
+labels: ["data"]
+body:
+  - type: input
+    id: queue
+    attributes:
+      label: Черга
+      placeholder: "3.1"
+    validations:
+      required: true
+  - type: input
+    id: date
+    attributes:
+      label: Дата графіка
+      placeholder: "17.10.2026"
+    validations:
+      required: true
+  - type: dropdown
+    id: where
+    attributes:
+      label: Де розбіжність
+      multiple: true
+      options:
+        - data/ivano-frankivsk.json
+        - Картинка черги (gpv-X-Y.png)
+        - Загальна картинка (gpv-all-today / gpv-all-tomorrow)
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Що показує обленерго
+      description: Години відключень з svitlo.oe.if.ua. Додайте знімок екрана.
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Що показує цей репозиторій
+      description: Години відключень або посилання на файл.
+    validations:
+      required: true
+  - type: input
+    id: checked_at
+    attributes:
+      label: Коли ви перевіряли
+      placeholder: "17.10.2026 19:30"

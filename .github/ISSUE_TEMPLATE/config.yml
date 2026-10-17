@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Офіційний графік Прикарпаттяобленерго
+    url: https://svitlo.oe.if.ua
+    about: Перевірте актуальний графік на сайті обленерго.
+  - name: Повідомити про вразливість
+    url: https://github.com/samokisha/outage-data-if/security/advisories/new
+    about: Не створюйте публічний issue для вразливостей.
