@@ -8,12 +8,37 @@
 </head>
 <body>
   <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <defs>
+      <!-- knock a gap around the slash so it reads on any cell background -->
+      <mask id="m-slash" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
+        <rect width="24" height="24" fill="#fff"/>
+        <path d="M3.5 3.5 20.5 20.5" stroke="#000" stroke-width="3.8" stroke-linecap="round"/>
+      </mask>
+      <clipPath id="c-left"><rect x="0" y="0" width="12" height="24"/></clipPath>
+      <clipPath id="c-right"><rect x="12" y="0" width="12" height="24"/></clipPath>
+      <path id="p-bolt" d="M14.8 1.5 4.2 13.6h6.4l-1.4 8.9 10.6-12.3h-6.4z"/>
+    </defs>
     <symbol id="i-off" viewBox="0 0 24 24">
-      <path d="M14 2 5 13.5h6L10 22l9-11.5h-6z" fill="#1f2430"/>
-      <path d="M3 3.5l18 17.5" stroke="#1f2430" stroke-width="2.2" stroke-linecap="round" fill="none"/>
+      <g mask="url(#m-slash)">
+        <use href="#p-bolt" fill="#1f2430" stroke="#1f2430" stroke-width="1.1" stroke-linejoin="round"/>
+      </g>
+      <path d="M3.5 3.5 20.5 20.5" stroke="#1f2430" stroke-width="1.7" stroke-linecap="round"/>
     </symbol>
-    <symbol id="i-half" viewBox="0 0 24 24">
-      <path d="M14 2 5 13.5h6L10 22l9-11.5h-6z" fill="#f5c400" stroke="#2b2f3a" stroke-width="1.3" stroke-linejoin="round"/>
+    <symbol id="i-first" viewBox="0 0 24 24">
+      <g mask="url(#m-slash)">
+        <use href="#p-bolt" fill="#1f2430" clip-path="url(#c-left)"/>
+        <use href="#p-bolt" fill="#f5c400" clip-path="url(#c-right)"/>
+        <use href="#p-bolt" fill="none" stroke="#1f2430" stroke-width="1.1" stroke-linejoin="round"/>
+      </g>
+      <path d="M3.5 3.5 20.5 20.5" stroke="#1f2430" stroke-width="1.7" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="i-second" viewBox="0 0 24 24">
+      <g mask="url(#m-slash)">
+        <use href="#p-bolt" fill="#f5c400" clip-path="url(#c-left)"/>
+        <use href="#p-bolt" fill="#1f2430" clip-path="url(#c-right)"/>
+        <use href="#p-bolt" fill="none" stroke="#1f2430" stroke-width="1.1" stroke-linejoin="round"/>
+      </g>
+      <path d="M3.5 3.5 20.5 20.5" stroke="#1f2430" stroke-width="1.7" stroke-linecap="round"/>
     </symbol>
   </svg>
 

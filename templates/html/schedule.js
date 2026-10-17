@@ -8,8 +8,8 @@
   var pad = function (n) { return (n < 10 ? '0' : '') + n; };
   var ICON = {
     no: '<svg class="ico off" aria-hidden="true"><use href="#i-off"/></svg>',
-    first: '<svg class="ico half" aria-hidden="true"><use href="#i-half"/></svg>',
-    second: '<svg class="ico half" aria-hidden="true"><use href="#i-half"/></svg>',
+    first: '<svg class="ico off" aria-hidden="true"><use href="#i-first"/></svg>',
+    second: '<svg class="ico off" aria-hidden="true"><use href="#i-second"/></svg>',
     yes: ''
   };
   function esc(s) {

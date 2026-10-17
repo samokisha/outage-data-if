@@ -44,6 +44,9 @@ th.hourh span {
 th.rowhead { height: var(--rh); text-align: left; padding: 3px 12px 0; font-size: 15px; font-weight: 700; white-space: nowrap; }
 th.rowhead .sub { display: block; margin-top: 3px; font-size: 13px; font-weight: 400; color: var(--muted); }
 table.days { --rh: 54px; }
+/* faint zebra on the all-groups matrix; --on is redefined so half-hour gradients follow the stripe */
+table.groups tbody tr:nth-child(even) { --on: #f4f5f7; }
+th.rowhead { background: var(--on); }
 
 td.cell { height: var(--rh); position: relative; }
 .s-yes { background: var(--on); }
@@ -52,10 +55,7 @@ td.cell { height: var(--rh); position: relative; }
 .s-second { background: linear-gradient(90deg, var(--on) 50%, var(--off) 50%); }
 
 .ico { position: absolute; top: 50%; transform: translate(-50%, -50%); display: block; }
-.ico.off { left: 50%; width: 24px; height: 24px; }
-.ico.half { width: 22px; height: 22px; }
-.s-first .ico.half { left: 75%; }
-.s-second .ico.half { left: 25%; }
+.ico.off { left: 50%; width: 28px; height: 28px; }
 
 th.message { height: 150px; text-align: center; vertical-align: middle; font-size: 26px; font-weight: 400; color: var(--muted); white-space: normal; }
 
@@ -63,8 +63,7 @@ th.message { height: 150px; text-align: center; vertical-align: middle; font-siz
 .legend[hidden] { display: none; }
 .item { display: inline-flex; align-items: center; gap: 12px; }
 .swatch { position: relative; width: 40px; height: 40px; border: 1px solid var(--line); flex: none; }
-.swatch .ico.off { width: 28px; height: 28px; }
-.swatch .ico.half { width: 25px; height: 25px; }
+.swatch .ico.off { width: 30px; height: 30px; }
 .lbl { font-size: 16px; color: var(--muted); white-space: nowrap; }
 .credit { margin: 24px 0 0; font-size: 13px; color: var(--muted); text-align: right; white-space: nowrap; }
 .credit[hidden] { display: none; }
