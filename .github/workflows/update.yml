@@ -1,0 +1,152 @@
+name: Update Ivano-Frankivsk schedule
+
+on:
+  schedule:
+    - cron: '*/10 * * * *'
+  workflow_dispatch:
+    inputs:
+      force_render:
+        description: 'Re-render images even if data did not change'
+        required: false
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-schedule
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    env:
+      TARGET_BRANCH: main
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v7
+        with:
+          fetch-depth: 1
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v7
+        with:
+          node-version: '24'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Fetch schedule from API
+        id: fetch
+        run: node scripts/fetch_if.mjs
+
+      - name: Read meta.json from the images branch
+        id: prev
+        shell: bash
+        run: |
+          set -euo pipefail
+          prev_meta="$RUNNER_TEMP/prev-meta.json"
+          rm -f "$prev_meta"
+          rc=0
+          git ls-remote --exit-code --heads origin refs/heads/images >/dev/null || rc=$?
+          case "$rc" in
+            0)
+              echo "branch_exists=true" >> "$GITHUB_OUTPUT"
+              git fetch --no-tags --depth=1 origin images
+              git show FETCH_HEAD:images/ivano-frankivsk/meta.json > "$prev_meta" \
+                || { echo "[WARN] meta.json not found on the images branch"; rm -f "$prev_meta"; }
+              ;;
+            2)
+              echo "branch_exists=false" >> "$GITHUB_OUTPUT"
+              echo "[INFO] images branch does not exist yet"
+              ;;
+            *)
+              echo "::error::git ls-remote origin failed with exit code $rc; cannot tell whether the images branch exists"
+              exit 1
+              ;;
+          esac
+          echo "prev_meta=$prev_meta" >> "$GITHUB_OUTPUT"
+
+      - name: Decide whether to render
+        id: decide
+        run: >-
+          node scripts/need_render.mjs
+          --prev-meta "${{ steps.prev.outputs.prev_meta }}"
+          --branch-exists "${{ steps.prev.outputs.branch_exists }}"
+          --force "${{ github.event.inputs.force_render == 'true' }}"
+
+      - name: Cache Playwright browsers
+        if: steps.decide.outputs.render == 'true'
+        id: playwright-cache
+        uses: actions/cache@v6
+        with:
+          path: ~/.cache/ms-playwright
+          key: ${{ runner.os }}-ms-playwright-${{ hashFiles('package-lock.json') }}
+
+      - name: Install Playwright Chromium (with system deps)
+        if: steps.decide.outputs.render == 'true' && steps.playwright-cache.outputs.cache-hit != 'true'
+        run: npx playwright install --with-deps chromium
+
+      - name: Install Playwright system deps (browser cached)
+        if: steps.decide.outputs.render == 'true' && steps.playwright-cache.outputs.cache-hit == 'true'
+        run: npx playwright install-deps chromium
+
+      - name: Render images
+        if: steps.decide.outputs.render == 'true'
+        run: |
+          rm -rf images/ivano-frankivsk
+          node scripts/render.mjs --now "${{ steps.decide.outputs.now_ms }}"
+
+      - name: Compress images with pngquant
+        if: steps.decide.outputs.render == 'true'
+        shell: bash
+        run: |
+          set -euo pipefail
+          node_modules/.bin/pngquant --version
+          # pngquant exits 98/99 when the result is larger or below quality; keep the original then.
+          # Any other exit code fails the step.
+          find images/ivano-frankivsk -name '*.png' -print0 \
+            | xargs -0 -P 4 -n 1 sh -c 'node_modules/.bin/pngquant --force --ext .png --quality 65-90 --skip-if-larger "$1"; c=$?; [ $c -eq 0 ] || [ $c -eq 98 ] || [ $c -eq 99 ]' _
+
+      - name: Write meta.json
+        if: steps.decide.outputs.render == 'true'
+        run: node scripts/write_meta.mjs --now "${{ steps.decide.outputs.now_ms }}"
+
+      - name: Configure git identity
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+      - name: Commit and push data
+        if: steps.fetch.outputs.changed == 'true'
+        shell: bash
+        run: |
+          set -euo pipefail
+          git add data/ raw/
+          if git diff --cached --quiet; then
+            echo "[INFO] Nothing to commit"
+            exit 0
+          fi
+          git diff --cached --name-only
+          git commit -m "chore: update Ivano-Frankivsk schedule"
+
+          for attempt in 1 2 3 4 5; do
+            if git push origin HEAD:"$TARGET_BRANCH"; then
+              echo "[OK] Pushed to $TARGET_BRANCH"
+              exit 0
+            fi
+            echo "[WARN] Push failed (attempt $attempt). Rebasing on origin/$TARGET_BRANCH..."
+            git fetch origin "$TARGET_BRANCH"
+            git rebase "origin/$TARGET_BRANCH" || { git rebase --abort || true; echo "[ERROR] Rebase conflict" >&2; exit 1; }
+            sleep $((attempt * 3))
+          done
+          echo "[ERROR] Failed to push after retries" >&2
+          exit 1
+
+      - name: Publish images branch
+        if: steps.decide.outputs.render == 'true'
+        run: bash scripts/publish_images.sh origin

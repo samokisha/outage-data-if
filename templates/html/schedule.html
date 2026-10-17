@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Графік відключень</title>
+  <link rel="stylesheet" href="schedule.css">
+</head>
+<body>
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <symbol id="i-off" viewBox="0 0 24 24">
+      <path d="M14 2 5 13.5h6L10 22l9-11.5h-6z" fill="#1f2430"/>
+      <path d="M3 3.5l18 17.5" stroke="#1f2430" stroke-width="2.2" stroke-linecap="round" fill="none"/>
+    </symbol>
+    <symbol id="i-half" viewBox="0 0 24 24">
+      <path d="M14 2 5 13.5h6L10 22l9-11.5h-6z" fill="#f5c400" stroke="#2b2f3a" stroke-width="1.3" stroke-linejoin="round"/>
+    </symbol>
+  </svg>
+
+  <div class="container">
+    <h1 id="title"></h1>
+    <p class="updated" id="updated"></p>
+    <div class="tablewrap">
+      <table id="grid">
+        <thead id="thead"></thead>
+        <tbody id="tbody"></tbody>
+      </table>
+    </div>
+    <div class="legend" id="legend"></div>
+    <p class="credit" id="credit"></p>
+  </div>
+
+  <script src="schedule.js"></script>
+</body>
+</html>
