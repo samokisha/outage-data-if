@@ -67,13 +67,36 @@ describe('renderKey', () => {
     changed[1792184400]['GPV1.1'][1] = 'no';
     assert.notEqual(key(doc(DATA)), key(doc(changed)));
   });
-  test('same Kyiv day -> same key; next Kyiv day -> new key', () => {
+  test('same Kyiv day -> same key; next Kyiv day with other visible days -> new key', () => {
     // 20:59 UTC = 23:59 Kyiv, 21:01 UTC = 00:01 Kyiv next day
     const late = Date.UTC(2026, 9, 17, 20, 59);
     const next = Date.UTC(2026, 9, 17, 21, 1);
     assert.equal(key(doc(DATA)), key(doc(DATA), { nowMs: late }));
     assert.notEqual(key(doc(DATA), { nowMs: late }), key(doc(DATA), { nowMs: next }));
     assert.equal(todayKeyAt(next) - todayKeyAt(late), 86400);
+  });
+  test('next Kyiv day with no schedule -> same key', () => {
+    assert.equal(key(doc({})), key(doc({}), { nowMs: NOW + 86400e3 }));
+  });
+  test('next Kyiv day with the same content shifted by a day -> same key', () => {
+    const today = todayKeyAt(NOW);
+    const day = DATA[Object.keys(DATA)[0]];
+    assert.equal(key(doc({ [today]: day })), key(doc({ [today + 86400]: day }), { nowMs: NOW + 86400e3 }));
+  });
+  test('same content on today vs tomorrow -> different keys', () => {
+    const today = todayKeyAt(NOW);
+    const day = DATA[Object.keys(DATA)[0]];
+    assert.notEqual(key(doc({ [today]: day })), key(doc({ [today + 86400]: day })));
+  });
+  test('a day beyond tomorrow moved to another date -> new key', () => {
+    const today = todayKeyAt(NOW);
+    const day = DATA[Object.keys(DATA)[0]];
+    assert.notEqual(key(doc({ [today + 2 * 86400]: day })), key(doc({ [today + 3 * 86400]: day })));
+  });
+  test('past days do not change the key', () => {
+    const today = todayKeyAt(NOW);
+    const day = DATA[Object.keys(DATA)[0]];
+    assert.equal(key(doc({})), key(doc({ [today - 86400]: day })));
   });
   test('template content, source order and slug', () => {
     assert.notEqual(key(doc(DATA)), key(doc(DATA), { sources: [SOURCES[0], { path: 'scripts/lib/views.mjs', content: 'v2' }] }));
@@ -208,9 +231,14 @@ describe('need_render.mjs', () => {
     const meta = { renderKey: await expectedKey() };
     assert.equal((await cli([], { data: doc(DATA, '17.10.2026 23:00'), meta })).outputs.render, 'false');
   });
-  test('next Kyiv day -> render=true', async () => {
+  test('next Kyiv day, today\'s schedule gone -> render=true', async () => {
     const meta = { renderKey: await expectedKey() };
     assert.equal((await cli(['--now', String(NOW + 86400e3)], { data: d, meta })).outputs.render, 'true');
+  });
+  test('next Kyiv day, no schedule on both days -> render=false', async () => {
+    const empty = doc({});
+    const meta = { renderKey: renderKey(empty, { nowMs: NOW, sources: await readRenderSources(root) }) };
+    assert.equal((await cli(['--now', String(NOW + 86400e3)], { data: empty, meta })).outputs.render, 'false');
   });
   test('old meta with scheduleHash only -> render=true', async () => {
     assert.equal((await cli([], { data: d, meta: { scheduleHash: scheduleHash(d) } })).outputs.render, 'true');

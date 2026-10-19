@@ -37,9 +37,23 @@ const sha256 = (x) => createHash('sha256').update(x).digest('hex');
 export const todayKeyAt = (nowMs) => kyivMidnightUnix(kyivDateString(nowMs));
 
 /**
- * Key of everything that changes the rendered images: fact.data, the Kyiv day at render time
- * (today/tomorrow images and labels), the template and view sources, and the repo slug.
- * fact.update is not part of the key: an update-time-only change does not re-render.
+ * The schedule content the images show at nowMs, without the dates: each day from today on as
+ * [offset in days from today, content]. Offset 0 is "today", 1 is "tomorrow". A new Kyiv day
+ * with the same content at the same offsets (for example, no schedule at all) gives the same value.
+ */
+export function visibleDays(doc, nowMs) {
+  const data = (doc && doc.fact && doc.fact.data) || {};
+  const todayKey = kyivMidnightUnix(kyivDateString(nowMs));
+  return Object.keys(data).map(Number).filter((k) => k >= todayKey).sort((a, b) => a - b)
+    // Math.round: a DST day has 23 or 25 hours
+    .map((k) => [Math.round((k - todayKey) / 86400), data[String(k)]]);
+}
+
+/**
+ * Key of everything that changes the rendered images: the visible schedule content (see
+ * visibleDays), the template and view sources, and the repo slug.
+ * The date alone is not part of the key: when only the Kyiv day changes and the visible
+ * content stays the same, the images keep the old date. fact.update is not part of the key.
  * @param {object} doc data/ivano-frankivsk.json
  * @param {{ nowMs: number, sources: { path: string, content: string|Buffer }[], slug?: string }} opts
  */
@@ -47,8 +61,7 @@ export function renderKey(doc, { nowMs, sources, slug = REPO_SLUG }) {
   const files = [...sources]
     .sort((a, b) => (a.path < b.path ? -1 : a.path > b.path ? 1 : 0))
     .map((f) => [f.path, sha256(f.content)]);
-  const data = (doc && doc.fact && doc.fact.data) || {};
-  return sha256(canonicalJson({ data, todayKey: todayKeyAt(nowMs), files, slug }));
+  return sha256(canonicalJson({ visible: visibleDays(doc, nowMs), files, slug }));
 }
 
 /**
@@ -61,7 +74,7 @@ export function decideRender({ force = false, branchExists = true, prevMeta = nu
   if (!prevMeta || typeof prevMeta !== 'object') return { render: true, reason: 'meta.json is missing or invalid on the images branch' };
   if (!prevMeta.renderKey) return { render: true, reason: 'meta.json has no renderKey' };
   if (prevMeta.renderKey !== key) {
-    return { render: true, reason: `renderKey changed (${prevMeta.renderKey} -> ${key}): schedule, Kyiv day, templates or repo slug changed` };
+    return { render: true, reason: `renderKey changed (${prevMeta.renderKey} -> ${key}): visible schedule, templates or repo slug changed` };
   }
   return { render: false, reason: `renderKey unchanged (${key})` };
 }

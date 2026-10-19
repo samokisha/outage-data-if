@@ -3,7 +3,7 @@
 // Run it after pngquant, so the sha256 values match the final files.
 //
 // Usage: node scripts/write_meta.mjs [--data <path>] [--dir <path>] [--now <ms>]
-//   --now  the render instant used by render.mjs (default now); it sets the Kyiv day in renderKey
+//   --now  the render instant used by render.mjs (default now); it sets which days are visible in renderKey
 
 import { readFile, readdir, writeFile } from 'node:fs/promises';
 import { createHash } from 'node:crypto';
