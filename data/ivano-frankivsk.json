@@ -1,11 +1,11 @@
 {
   "regionId": "ivano-frankivsk",
   "regionAffiliation": "Івано-Франківська область",
-  "lastUpdated": "2026-11-15T22:04:17.402Z",
+  "lastUpdated": "2026-11-17T02:39:03.042Z",
   "fact": {
     "data": {},
     "update": null,
-    "today": 1794780000
+    "today": 1794866400
   },
   "preset": {
     "days": {
@@ -179,11 +179,11 @@
     "ok": true,
     "code": 200,
     "message": null,
-    "at": "2026-11-15T22:04:17.402Z",
-    "attempt": 31
+    "at": "2026-11-17T02:39:03.042Z",
+    "attempt": 32
   },
   "meta": {
     "schemaVersion": "1.0.0",
-    "contentHash": "983dbe9a5423ac54879253c261064634a67802fc75a82b8d9182cfff97d40ba6"
+    "contentHash": "38a9000741db540cb5a3e198c45305d52a5ab9a7e1285afb5f5a7f5fe4bb3b73"
   }
 }
