@@ -175,12 +175,12 @@
     "updateFact": null
   },
   "lastUpdateStatus": {
-    "status": "parsed",
-    "ok": true,
-    "code": 200,
-    "message": null,
-    "at": "2026-11-19T00:58:48.873Z",
-    "attempt": 34
+    "status": "error",
+    "ok": false,
+    "code": 503,
+    "message": "Partial fetch: 8/12 queues failed (1.1, 1.2, 2.1, 4.1, 4.2, 5.1, 5.2, 6.1), previous data kept",
+    "at": "2026-11-19T17:38:22.381Z",
+    "attempt": 35
   },
   "meta": {
     "schemaVersion": "1.0.0",
