@@ -1,17 +1,153 @@
 {
   "source": "https://be-svitlo.oe.if.ua/schedule-by-queue?queue=",
   "queues": {
-    "1.1": [],
-    "1.2": [],
-    "2.1": [],
-    "2.2": [],
-    "3.1": [],
-    "3.2": [],
-    "4.1": [],
-    "4.2": [],
-    "5.1": [],
-    "5.2": [],
-    "6.1": [],
-    "6.2": []
+    "1.1": [
+      {
+        "eventDate": "20.11.2026",
+        "queues": {
+          "1.1": []
+        },
+        "createdAt": "20.11.2026 07:43",
+        "scheduleApprovedSince": "20.11.2026 07:43"
+      }
+    ],
+    "1.2": [
+      {
+        "eventDate": "20.11.2026",
+        "queues": {
+          "1.2": []
+        },
+        "createdAt": "20.11.2026 07:43",
+        "scheduleApprovedSince": "20.11.2026 07:43"
+      }
+    ],
+    "2.1": [
+      {
+        "eventDate": "20.11.2026",
+        "queues": {
+          "2.1": []
+        },
+        "createdAt": "20.11.2026 07:43",
+        "scheduleApprovedSince": "20.11.2026 07:43"
+      }
+    ],
+    "2.2": [
+      {
+        "eventDate": "20.11.2026",
+        "queues": {
+          "2.2": []
+        },
+        "createdAt": "20.11.2026 07:43",
+        "scheduleApprovedSince": "20.11.2026 07:43"
+      }
+    ],
+    "3.1": [
+      {
+        "eventDate": "20.11.2026",
+        "queues": {
+          "3.1": [
+            {
+              "shutdownHours": "08:30-10:30",
+              "from": "08:30",
+              "to": "10:30",
+              "status": 1
+            }
+          ]
+        },
+        "createdAt": "20.11.2026 07:43",
+        "scheduleApprovedSince": "20.11.2026 07:43"
+      }
+    ],
+    "3.2": [
+      {
+        "eventDate": "20.11.2026",
+        "queues": {
+          "3.2": [
+            {
+              "shutdownHours": "08:30-10:30",
+              "from": "08:30",
+              "to": "10:30",
+              "status": 1
+            }
+          ]
+        },
+        "createdAt": "20.11.2026 07:43",
+        "scheduleApprovedSince": "20.11.2026 07:43"
+      }
+    ],
+    "4.1": [
+      {
+        "eventDate": "20.11.2026",
+        "queues": {
+          "4.1": [
+            {
+              "shutdownHours": "08:30-10:30",
+              "from": "08:30",
+              "to": "10:30",
+              "status": 1
+            }
+          ]
+        },
+        "createdAt": "20.11.2026 07:43",
+        "scheduleApprovedSince": "20.11.2026 07:43"
+      }
+    ],
+    "4.2": [
+      {
+        "eventDate": "20.11.2026",
+        "queues": {
+          "4.2": []
+        },
+        "createdAt": "20.11.2026 07:43",
+        "scheduleApprovedSince": "20.11.2026 07:43"
+      }
+    ],
+    "5.1": [
+      {
+        "eventDate": "20.11.2026",
+        "queues": {
+          "5.1": []
+        },
+        "createdAt": "20.11.2026 07:43",
+        "scheduleApprovedSince": "20.11.2026 07:43"
+      }
+    ],
+    "5.2": [
+      {
+        "eventDate": "20.11.2026",
+        "queues": {
+          "5.2": []
+        },
+        "createdAt": "20.11.2026 07:43",
+        "scheduleApprovedSince": "20.11.2026 07:43"
+      }
+    ],
+    "6.1": [
+      {
+        "eventDate": "20.11.2026",
+        "queues": {
+          "6.1": []
+        },
+        "createdAt": "20.11.2026 07:43",
+        "scheduleApprovedSince": "20.11.2026 07:43"
+      }
+    ],
+    "6.2": [
+      {
+        "eventDate": "20.11.2026",
+        "queues": {
+          "6.2": [
+            {
+              "shutdownHours": "08:30-10:30",
+              "from": "08:30",
+              "to": "10:30",
+              "status": 1
+            }
+          ]
+        },
+        "createdAt": "20.11.2026 07:43",
+        "scheduleApprovedSince": "20.11.2026 07:43"
+      }
+    ]
   }
 }
