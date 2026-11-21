@@ -1,7 +1,7 @@
 {
   "regionId": "ivano-frankivsk",
   "regionAffiliation": "Івано-Франківська область",
-  "lastUpdated": "2026-11-21T07:17:44.803Z",
+  "lastUpdated": "2026-11-21T08:22:48.101Z",
   "fact": {
     "data": {
       "1795212000": {
@@ -16,7 +16,7 @@
           "8": "yes",
           "9": "yes",
           "10": "yes",
-          "11": "no",
+          "11": "yes",
           "12": "no",
           "13": "yes",
           "14": "yes",
@@ -94,7 +94,7 @@
           "8": "yes",
           "9": "yes",
           "10": "yes",
-          "11": "no",
+          "11": "yes",
           "12": "no",
           "13": "yes",
           "14": "yes",
@@ -146,7 +146,7 @@
           "8": "yes",
           "9": "yes",
           "10": "yes",
-          "11": "no",
+          "11": "yes",
           "12": "no",
           "13": "yes",
           "14": "yes",
@@ -224,7 +224,7 @@
           "8": "yes",
           "9": "yes",
           "10": "yes",
-          "11": "no",
+          "11": "yes",
           "12": "no",
           "13": "yes",
           "14": "yes",
@@ -250,7 +250,7 @@
           "8": "yes",
           "9": "yes",
           "10": "yes",
-          "11": "no",
+          "11": "yes",
           "12": "no",
           "13": "yes",
           "14": "yes",
@@ -319,7 +319,7 @@
         }
       }
     },
-    "update": "21.11.2026 09:02",
+    "update": "21.11.2026 10:13",
     "today": 1795212000
   },
   "preset": {
@@ -487,18 +487,18 @@
       "msecond": "Світла можливо не буде другі 30 хв"
     },
     "data": {},
-    "updateFact": "21.11.2026 09:02"
+    "updateFact": "21.11.2026 10:13"
   },
   "lastUpdateStatus": {
     "status": "parsed",
     "ok": true,
     "code": 200,
     "message": null,
-    "at": "2026-11-21T07:17:44.803Z",
-    "attempt": 42
+    "at": "2026-11-21T08:22:48.101Z",
+    "attempt": 43
   },
   "meta": {
     "schemaVersion": "1.0.0",
-    "contentHash": "33daa81d24e53831daacee0cb2cbcd91ff776f90f1c5ec040725fa8e4aba2312"
+    "contentHash": "8f37803d6e158a1501a558e13c06a047497d9156649bd77551f669ddfb3bd8ff"
   }
 }
