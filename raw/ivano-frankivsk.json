@@ -7,8 +7,8 @@
         "queues": {
           "1.1": [
             {
-              "shutdownHours": "06:00-08:00",
-              "from": "06:00",
+              "shutdownHours": "07:30-08:00",
+              "from": "07:30",
               "to": "08:00",
               "status": 1
             },
@@ -27,7 +27,7 @@
           ]
         },
         "createdAt": "24.11.2026 20:56",
-        "scheduleApprovedSince": "25.11.2026 00:36"
+        "scheduleApprovedSince": "25.11.2026 06:48"
       }
     ],
     "1.2": [
@@ -35,6 +35,12 @@
         "eventDate": "25.11.2026",
         "queues": {
           "1.2": [
+            {
+              "shutdownHours": "02:00-02:30",
+              "from": "02:00",
+              "to": "02:30",
+              "status": 1
+            },
             {
               "shutdownHours": "08:00-10:30",
               "from": "08:00",
@@ -56,7 +62,7 @@
           ]
         },
         "createdAt": "24.11.2026 20:56",
-        "scheduleApprovedSince": "25.11.2026 00:36"
+        "scheduleApprovedSince": "25.11.2026 06:48"
       }
     ],
     "2.1": [
@@ -64,6 +70,12 @@
         "eventDate": "25.11.2026",
         "queues": {
           "2.1": [
+            {
+              "shutdownHours": "02:00-03:30",
+              "from": "02:00",
+              "to": "03:30",
+              "status": 1
+            },
             {
               "shutdownHours": "10:30-14:00",
               "from": "10:30",
@@ -79,7 +91,7 @@
           ]
         },
         "createdAt": "24.11.2026 20:56",
-        "scheduleApprovedSince": "25.11.2026 00:36"
+        "scheduleApprovedSince": "25.11.2026 06:48"
       }
     ],
     "2.2": [
@@ -102,7 +114,7 @@
           ]
         },
         "createdAt": "24.11.2026 20:56",
-        "scheduleApprovedSince": "25.11.2026 00:36"
+        "scheduleApprovedSince": "25.11.2026 06:48"
       }
     ],
     "3.1": [
@@ -131,7 +143,7 @@
           ]
         },
         "createdAt": "24.11.2026 20:56",
-        "scheduleApprovedSince": "25.11.2026 00:36"
+        "scheduleApprovedSince": "25.11.2026 06:48"
       }
     ],
     "3.2": [
@@ -139,12 +151,6 @@
         "eventDate": "25.11.2026",
         "queues": {
           "3.2": [
-            {
-              "shutdownHours": "06:00-08:00",
-              "from": "06:00",
-              "to": "08:00",
-              "status": 1
-            },
             {
               "shutdownHours": "14:00-17:30",
               "from": "14:00",
@@ -160,7 +166,7 @@
           ]
         },
         "createdAt": "24.11.2026 20:56",
-        "scheduleApprovedSince": "25.11.2026 00:36"
+        "scheduleApprovedSince": "25.11.2026 06:48"
       }
     ],
     "4.1": [
@@ -189,7 +195,7 @@
           ]
         },
         "createdAt": "24.11.2026 20:56",
-        "scheduleApprovedSince": "25.11.2026 00:36"
+        "scheduleApprovedSince": "25.11.2026 06:48"
       }
     ],
     "4.2": [
@@ -212,7 +218,7 @@
           ]
         },
         "createdAt": "24.11.2026 20:56",
-        "scheduleApprovedSince": "25.11.2026 00:36"
+        "scheduleApprovedSince": "25.11.2026 06:48"
       }
     ],
     "5.1": [
@@ -247,7 +253,7 @@
           ]
         },
         "createdAt": "24.11.2026 20:56",
-        "scheduleApprovedSince": "25.11.2026 00:36"
+        "scheduleApprovedSince": "25.11.2026 06:48"
       }
     ],
     "5.2": [
@@ -282,7 +288,7 @@
           ]
         },
         "createdAt": "24.11.2026 20:56",
-        "scheduleApprovedSince": "25.11.2026 00:36"
+        "scheduleApprovedSince": "25.11.2026 06:48"
       }
     ],
     "6.1": [
@@ -291,8 +297,8 @@
         "queues": {
           "6.1": [
             {
-              "shutdownHours": "06:00-08:00",
-              "from": "06:00",
+              "shutdownHours": "07:30-08:00",
+              "from": "07:30",
               "to": "08:00",
               "status": 1
             },
@@ -311,7 +317,7 @@
           ]
         },
         "createdAt": "24.11.2026 20:56",
-        "scheduleApprovedSince": "25.11.2026 00:36"
+        "scheduleApprovedSince": "25.11.2026 06:48"
       }
     ],
     "6.2": [
@@ -340,7 +346,7 @@
           ]
         },
         "createdAt": "24.11.2026 20:56",
-        "scheduleApprovedSince": "25.11.2026 00:36"
+        "scheduleApprovedSince": "25.11.2026 06:48"
       }
     ]
   }
