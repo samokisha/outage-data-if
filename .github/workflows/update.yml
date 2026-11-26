@@ -2,7 +2,9 @@ name: Update Ivano-Frankivsk schedule
 
 on:
   schedule:
-    - cron: '*/10 * * * *'
+    # Primary trigger: Cloudflare Worker cron calls workflow_dispatch every 10 min.
+    # This hourly run is a fallback if the Worker or its token breaks.
+    - cron: '17 * * * *'
   workflow_dispatch:
     inputs:
       force_render:

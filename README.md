@@ -4,7 +4,7 @@
 
 Формат даних сумісний зі схемою [Baskerville42/outage-data-ua](https://github.com/Baskerville42/outage-data-ua). Клієнти, які вже читають `data/<region>.json` з того репозиторію, можуть читати `data/ivano-frankivsk.json` без змін.
 
-Дані оновлює GitHub Actions кожні 10 хвилин.
+Дані оновлює GitHub Actions кожні 10 хвилин. Запуск ініціює Cloudflare Worker через `workflow_dispatch`.
 
 ---
 
@@ -176,7 +176,7 @@ Workflow перемальовує зображення, коли змінюєт�
 
 Workflow `.github/workflows/update.yml`:
 
-1. Запуск за розкладом `*/10 * * * *` або вручну (`workflow_dispatch`, параметр `force_render` — перемалювати зображення навіть без зміни графіка).
+1. Запуск через `workflow_dispatch` (параметр `force_render` — перемалювати зображення навіть без зміни графіка). Cloudflare Worker викликає його кожні 10 хвилин через GitHub API. Резервний запуск за розкладом `17 * * * *` спрацьовує раз на годину, якщо Worker не працює.
 2. `npm ci`.
 3. `node scripts/fetch_if.mjs` — 12 запитів (тайм-аут, 3 повтори з наростаючою паузою, браузерний User-Agent), побудова JSON, правило змін. Вихід кроку `changed` означає, що є що комітити в `main`.
 4. Workflow читає `images/ivano-frankivsk/meta.json` з гілки `images` (`git fetch --depth=1 origin images`).
@@ -187,7 +187,7 @@ Workflow `.github/workflows/update.yml`:
 
 Обмеження:
 
-- GitHub не гарантує точний час запуску за cron. Під навантаженням запуски затримуються на 5–20 хв або пропускаються.
+- GitHub не гарантує точний час запуску за cron. Під навантаженням резервні запуски затримуються на 5–20 хв або пропускаються.
 - API може блокувати IP-адреси не з України (зокрема адреси GitHub-раннерів). Перший запуск у GitHub Actions це покаже: у такому разі в `lastUpdateStatus` буде `status: "error"`, а попередні дані залишаться без змін.
 - Якщо API недоступне довго, дані й зображення не оновлюються, зокрема після півночі.
 
