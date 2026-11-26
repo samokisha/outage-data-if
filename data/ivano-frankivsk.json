@@ -1,7 +1,7 @@
 {
   "regionId": "ivano-frankivsk",
   "regionAffiliation": "Івано-Франківська область",
-  "lastUpdated": "2026-11-26T08:45:23.870Z",
+  "lastUpdated": "2026-11-26T10:40:48.663Z",
   "fact": {
     "data": {
       "1795644000": {
@@ -227,8 +227,8 @@
           "11": "yes",
           "12": "yes",
           "13": "yes",
-          "14": "no",
-          "15": "first",
+          "14": "yes",
+          "15": "yes",
           "16": "yes",
           "17": "yes",
           "18": "yes",
@@ -253,8 +253,8 @@
           "11": "yes",
           "12": "no",
           "13": "no",
-          "14": "no",
-          "15": "first",
+          "14": "yes",
+          "15": "yes",
           "16": "yes",
           "17": "yes",
           "18": "yes",
@@ -279,8 +279,8 @@
           "11": "yes",
           "12": "no",
           "13": "no",
-          "14": "no",
-          "15": "first",
+          "14": "yes",
+          "15": "yes",
           "16": "yes",
           "17": "yes",
           "18": "yes",
@@ -305,8 +305,8 @@
           "11": "yes",
           "12": "yes",
           "13": "yes",
-          "14": "no",
-          "15": "no",
+          "14": "yes",
+          "15": "second",
           "16": "no",
           "17": "first",
           "18": "yes",
@@ -319,7 +319,7 @@
         }
       }
     },
-    "update": "26.11.2026 10:31",
+    "update": "26.11.2026 12:35",
     "today": 1795644000
   },
   "preset": {
@@ -487,18 +487,18 @@
       "msecond": "Світла можливо не буде другі 30 хв"
     },
     "data": {},
-    "updateFact": "26.11.2026 10:31"
+    "updateFact": "26.11.2026 12:35"
   },
   "lastUpdateStatus": {
     "status": "parsed",
     "ok": true,
     "code": 200,
     "message": null,
-    "at": "2026-11-26T08:45:23.870Z",
-    "attempt": 63
+    "at": "2026-11-26T10:40:48.663Z",
+    "attempt": 64
   },
   "meta": {
     "schemaVersion": "1.0.0",
-    "contentHash": "98ab91310bb432854ed2574ad9702baccb4453201c3bdf0e7a3b48b9611a930b"
+    "contentHash": "a4c3288450eb3e5a4032af849915e35d327705f92e890074102bfe8d26088cd0"
   }
 }
