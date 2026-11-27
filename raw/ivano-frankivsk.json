@@ -28,6 +28,27 @@
         },
         "createdAt": "26.11.2026 22:20",
         "scheduleApprovedSince": "27.11.2026 18:51"
+      },
+      {
+        "eventDate": "28.11.2026",
+        "queues": {
+          "1.1": [
+            {
+              "shutdownHours": "09:00-12:00",
+              "from": "09:00",
+              "to": "12:00",
+              "status": 1
+            },
+            {
+              "shutdownHours": "15:30-19:00",
+              "from": "15:30",
+              "to": "19:00",
+              "status": 1
+            }
+          ]
+        },
+        "createdAt": "27.11.2026 21:17",
+        "scheduleApprovedSince": "27.11.2026 21:17"
       }
     ],
     "1.2": [
@@ -57,6 +78,27 @@
         },
         "createdAt": "26.11.2026 22:20",
         "scheduleApprovedSince": "27.11.2026 18:51"
+      },
+      {
+        "eventDate": "28.11.2026",
+        "queues": {
+          "1.2": [
+            {
+              "shutdownHours": "12:00-15:30",
+              "from": "12:00",
+              "to": "15:30",
+              "status": 1
+            },
+            {
+              "shutdownHours": "19:00-22:00",
+              "from": "19:00",
+              "to": "22:00",
+              "status": 1
+            }
+          ]
+        },
+        "createdAt": "27.11.2026 21:17",
+        "scheduleApprovedSince": "27.11.2026 21:17"
       }
     ],
     "2.1": [
@@ -80,6 +122,33 @@
         },
         "createdAt": "26.11.2026 22:20",
         "scheduleApprovedSince": "27.11.2026 18:51"
+      },
+      {
+        "eventDate": "28.11.2026",
+        "queues": {
+          "2.1": [
+            {
+              "shutdownHours": "09:00-12:00",
+              "from": "09:00",
+              "to": "12:00",
+              "status": 1
+            },
+            {
+              "shutdownHours": "15:30-19:00",
+              "from": "15:30",
+              "to": "19:00",
+              "status": 1
+            },
+            {
+              "shutdownHours": "22:00-00:00",
+              "from": "22:00",
+              "to": "00:00",
+              "status": 1
+            }
+          ]
+        },
+        "createdAt": "27.11.2026 21:17",
+        "scheduleApprovedSince": "27.11.2026 21:17"
       }
     ],
     "2.2": [
@@ -103,6 +172,33 @@
         },
         "createdAt": "26.11.2026 22:20",
         "scheduleApprovedSince": "27.11.2026 18:51"
+      },
+      {
+        "eventDate": "28.11.2026",
+        "queues": {
+          "2.2": [
+            {
+              "shutdownHours": "06:00-09:00",
+              "from": "06:00",
+              "to": "09:00",
+              "status": 1
+            },
+            {
+              "shutdownHours": "15:30-19:00",
+              "from": "15:30",
+              "to": "19:00",
+              "status": 1
+            },
+            {
+              "shutdownHours": "22:00-00:00",
+              "from": "22:00",
+              "to": "00:00",
+              "status": 1
+            }
+          ]
+        },
+        "createdAt": "27.11.2026 21:17",
+        "scheduleApprovedSince": "27.11.2026 21:17"
       }
     ],
     "3.1": [
@@ -132,6 +228,27 @@
         },
         "createdAt": "26.11.2026 22:20",
         "scheduleApprovedSince": "27.11.2026 18:51"
+      },
+      {
+        "eventDate": "28.11.2026",
+        "queues": {
+          "3.1": [
+            {
+              "shutdownHours": "12:00-15:30",
+              "from": "12:00",
+              "to": "15:30",
+              "status": 1
+            },
+            {
+              "shutdownHours": "19:00-22:00",
+              "from": "19:00",
+              "to": "22:00",
+              "status": 1
+            }
+          ]
+        },
+        "createdAt": "27.11.2026 21:17",
+        "scheduleApprovedSince": "27.11.2026 21:17"
       }
     ],
     "3.2": [
@@ -155,6 +272,27 @@
         },
         "createdAt": "26.11.2026 22:20",
         "scheduleApprovedSince": "27.11.2026 18:51"
+      },
+      {
+        "eventDate": "28.11.2026",
+        "queues": {
+          "3.2": [
+            {
+              "shutdownHours": "08:00-12:00",
+              "from": "08:00",
+              "to": "12:00",
+              "status": 1
+            },
+            {
+              "shutdownHours": "15:30-19:00",
+              "from": "15:30",
+              "to": "19:00",
+              "status": 1
+            }
+          ]
+        },
+        "createdAt": "27.11.2026 21:17",
+        "scheduleApprovedSince": "27.11.2026 21:17"
       }
     ],
     "4.1": [
@@ -178,6 +316,27 @@
         },
         "createdAt": "26.11.2026 22:20",
         "scheduleApprovedSince": "27.11.2026 18:51"
+      },
+      {
+        "eventDate": "28.11.2026",
+        "queues": {
+          "4.1": [
+            {
+              "shutdownHours": "08:00-12:00",
+              "from": "08:00",
+              "to": "12:00",
+              "status": 1
+            },
+            {
+              "shutdownHours": "19:00-22:00",
+              "from": "19:00",
+              "to": "22:00",
+              "status": 1
+            }
+          ]
+        },
+        "createdAt": "27.11.2026 21:17",
+        "scheduleApprovedSince": "27.11.2026 21:17"
       }
     ],
     "4.2": [
@@ -207,6 +366,27 @@
         },
         "createdAt": "26.11.2026 22:20",
         "scheduleApprovedSince": "27.11.2026 18:51"
+      },
+      {
+        "eventDate": "28.11.2026",
+        "queues": {
+          "4.2": [
+            {
+              "shutdownHours": "09:00-12:00",
+              "from": "09:00",
+              "to": "12:00",
+              "status": 1
+            },
+            {
+              "shutdownHours": "16:00-20:00",
+              "from": "16:00",
+              "to": "20:00",
+              "status": 1
+            }
+          ]
+        },
+        "createdAt": "27.11.2026 21:17",
+        "scheduleApprovedSince": "27.11.2026 21:17"
       }
     ],
     "5.1": [
@@ -230,6 +410,33 @@
         },
         "createdAt": "26.11.2026 22:20",
         "scheduleApprovedSince": "27.11.2026 18:51"
+      },
+      {
+        "eventDate": "28.11.2026",
+        "queues": {
+          "5.1": [
+            {
+              "shutdownHours": "06:00-09:00",
+              "from": "06:00",
+              "to": "09:00",
+              "status": 1
+            },
+            {
+              "shutdownHours": "12:00-15:30",
+              "from": "12:00",
+              "to": "15:30",
+              "status": 1
+            },
+            {
+              "shutdownHours": "22:00-00:00",
+              "from": "22:00",
+              "to": "00:00",
+              "status": 1
+            }
+          ]
+        },
+        "createdAt": "27.11.2026 21:17",
+        "scheduleApprovedSince": "27.11.2026 21:17"
       }
     ],
     "5.2": [
@@ -253,6 +460,27 @@
         },
         "createdAt": "26.11.2026 22:20",
         "scheduleApprovedSince": "27.11.2026 18:51"
+      },
+      {
+        "eventDate": "28.11.2026",
+        "queues": {
+          "5.2": [
+            {
+              "shutdownHours": "12:00-15:30",
+              "from": "12:00",
+              "to": "15:30",
+              "status": 1
+            },
+            {
+              "shutdownHours": "19:00-22:00",
+              "from": "19:00",
+              "to": "22:00",
+              "status": 1
+            }
+          ]
+        },
+        "createdAt": "27.11.2026 21:17",
+        "scheduleApprovedSince": "27.11.2026 21:17"
       }
     ],
     "6.1": [
@@ -282,6 +510,27 @@
         },
         "createdAt": "26.11.2026 22:20",
         "scheduleApprovedSince": "27.11.2026 18:51"
+      },
+      {
+        "eventDate": "28.11.2026",
+        "queues": {
+          "6.1": [
+            {
+              "shutdownHours": "06:00-09:00",
+              "from": "06:00",
+              "to": "09:00",
+              "status": 1
+            },
+            {
+              "shutdownHours": "15:30-19:00",
+              "from": "15:30",
+              "to": "19:00",
+              "status": 1
+            }
+          ]
+        },
+        "createdAt": "27.11.2026 21:17",
+        "scheduleApprovedSince": "27.11.2026 21:17"
       }
     ],
     "6.2": [
@@ -311,6 +560,27 @@
         },
         "createdAt": "26.11.2026 22:20",
         "scheduleApprovedSince": "27.11.2026 18:51"
+      },
+      {
+        "eventDate": "28.11.2026",
+        "queues": {
+          "6.2": [
+            {
+              "shutdownHours": "12:00-15:30",
+              "from": "12:00",
+              "to": "15:30",
+              "status": 1
+            },
+            {
+              "shutdownHours": "19:00-22:00",
+              "from": "19:00",
+              "to": "22:00",
+              "status": 1
+            }
+          ]
+        },
+        "createdAt": "27.11.2026 21:17",
+        "scheduleApprovedSince": "27.11.2026 21:17"
       }
     ]
   }
