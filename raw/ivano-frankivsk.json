@@ -21,7 +21,7 @@
           ]
         },
         "createdAt": "27.11.2026 21:17",
-        "scheduleApprovedSince": "27.11.2026 21:17"
+        "scheduleApprovedSince": "28.11.2026 07:31"
       }
     ],
     "1.2": [
@@ -44,7 +44,7 @@
           ]
         },
         "createdAt": "27.11.2026 21:17",
-        "scheduleApprovedSince": "27.11.2026 21:17"
+        "scheduleApprovedSince": "28.11.2026 07:31"
       }
     ],
     "2.1": [
@@ -73,7 +73,7 @@
           ]
         },
         "createdAt": "27.11.2026 21:17",
-        "scheduleApprovedSince": "27.11.2026 21:17"
+        "scheduleApprovedSince": "28.11.2026 07:31"
       }
     ],
     "2.2": [
@@ -102,7 +102,7 @@
           ]
         },
         "createdAt": "27.11.2026 21:17",
-        "scheduleApprovedSince": "27.11.2026 21:17"
+        "scheduleApprovedSince": "28.11.2026 07:31"
       }
     ],
     "3.1": [
@@ -125,7 +125,7 @@
           ]
         },
         "createdAt": "27.11.2026 21:17",
-        "scheduleApprovedSince": "27.11.2026 21:17"
+        "scheduleApprovedSince": "28.11.2026 07:31"
       }
     ],
     "3.2": [
@@ -134,8 +134,8 @@
         "queues": {
           "3.2": [
             {
-              "shutdownHours": "08:00-12:00",
-              "from": "08:00",
+              "shutdownHours": "09:00-12:00",
+              "from": "09:00",
               "to": "12:00",
               "status": 1
             },
@@ -148,7 +148,7 @@
           ]
         },
         "createdAt": "27.11.2026 21:17",
-        "scheduleApprovedSince": "27.11.2026 21:17"
+        "scheduleApprovedSince": "28.11.2026 07:31"
       }
     ],
     "4.1": [
@@ -157,8 +157,8 @@
         "queues": {
           "4.1": [
             {
-              "shutdownHours": "08:00-12:00",
-              "from": "08:00",
+              "shutdownHours": "09:00-12:00",
+              "from": "09:00",
               "to": "12:00",
               "status": 1
             },
@@ -171,7 +171,7 @@
           ]
         },
         "createdAt": "27.11.2026 21:17",
-        "scheduleApprovedSince": "27.11.2026 21:17"
+        "scheduleApprovedSince": "28.11.2026 07:31"
       }
     ],
     "4.2": [
@@ -194,7 +194,7 @@
           ]
         },
         "createdAt": "27.11.2026 21:17",
-        "scheduleApprovedSince": "27.11.2026 21:17"
+        "scheduleApprovedSince": "28.11.2026 07:31"
       }
     ],
     "5.1": [
@@ -203,9 +203,9 @@
         "queues": {
           "5.1": [
             {
-              "shutdownHours": "06:00-09:00",
+              "shutdownHours": "06:00-07:30",
               "from": "06:00",
-              "to": "09:00",
+              "to": "07:30",
               "status": 1
             },
             {
@@ -223,7 +223,7 @@
           ]
         },
         "createdAt": "27.11.2026 21:17",
-        "scheduleApprovedSince": "27.11.2026 21:17"
+        "scheduleApprovedSince": "28.11.2026 07:31"
       }
     ],
     "5.2": [
@@ -246,7 +246,7 @@
           ]
         },
         "createdAt": "27.11.2026 21:17",
-        "scheduleApprovedSince": "27.11.2026 21:17"
+        "scheduleApprovedSince": "28.11.2026 07:31"
       }
     ],
     "6.1": [
@@ -269,7 +269,7 @@
           ]
         },
         "createdAt": "27.11.2026 21:17",
-        "scheduleApprovedSince": "27.11.2026 21:17"
+        "scheduleApprovedSince": "28.11.2026 07:31"
       }
     ],
     "6.2": [
@@ -292,7 +292,7 @@
           ]
         },
         "createdAt": "27.11.2026 21:17",
-        "scheduleApprovedSince": "27.11.2026 21:17"
+        "scheduleApprovedSince": "28.11.2026 07:31"
       }
     ]
   }
