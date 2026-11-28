@@ -1,0 +1,66 @@
+{
+  "regionId": "ivano-frankivsk",
+  "renderedAt": "2026-11-28T07:21:39.052Z",
+  "scheduleUpdate": "28.11.2026 09:18",
+  "scheduleHash": "fc36ba942b2bce8568903501c9b9a3e2950e3ed5c5a331abb352701eb81d9237",
+  "renderKey": "e4578ce544c9cf689dd7ee8d4e82cc110f33e2bc6bcfcdbd50172d1e9b0b5de9",
+  "sourceRepo": "https://github.com/samokisha/outage-data-if",
+  "files": {
+    "gpv-1-1.png": {
+      "sha256": "936a5d016ee8d5527d7ac71501495bc5b8fd5071451f49b165786f37950d7c78",
+      "bytes": 31401
+    },
+    "gpv-1-2.png": {
+      "sha256": "6bef3dc915a6752e5415b8909543e716f1b8ceaae95109433d5b990424497761",
+      "bytes": 30858
+    },
+    "gpv-2-1.png": {
+      "sha256": "92e1793003578b97381a9755598725df22b88ed3b40c6f1649d4d35ea383288f",
+      "bytes": 31238
+    },
+    "gpv-2-2.png": {
+      "sha256": "5a1128278881c051c8c03d576931c051fe72b1402cc3e7edc0c974cd8222715b",
+      "bytes": 31287
+    },
+    "gpv-3-1.png": {
+      "sha256": "418e854859e148d80cd6a95b64c6f87391ae212cdc8601756a4213755ec4bc8a",
+      "bytes": 31162
+    },
+    "gpv-3-2.png": {
+      "sha256": "e4ef2d0097f4bc2d50d15332bd54c8ad5e93d00860f91753aeb7a96831622b91",
+      "bytes": 31992
+    },
+    "gpv-4-1.png": {
+      "sha256": "1aed5a5dee2af8132d5fe1bf6034c67d943ccb4f0d34b1777e60513f66264529",
+      "bytes": 30972
+    },
+    "gpv-4-2.png": {
+      "sha256": "2a54e9c549736ef551aad28a807738bba15f6a3ffb9e625c649b1096f256c217",
+      "bytes": 30407
+    },
+    "gpv-5-1.png": {
+      "sha256": "ccaf0cee9e6f5e781a0924d6c2d6d3345bca776311fb6581aeac63ed5fc55598",
+      "bytes": 31444
+    },
+    "gpv-5-2.png": {
+      "sha256": "bb1b013cfe8b8999b57a19e3a07418db7ed7842c6419fbea04bf525b514c6aaf",
+      "bytes": 31125
+    },
+    "gpv-6-1.png": {
+      "sha256": "374fad55219f8fc08c2db2074d3de135440777764ba2e4feb0431ab34f07ab67",
+      "bytes": 31488
+    },
+    "gpv-6-2.png": {
+      "sha256": "1ab1f1e3fbc1e711d29a7fd91903e146a96c53de4861793cbdb3d6784a590052",
+      "bytes": 31401
+    },
+    "gpv-all-today.png": {
+      "sha256": "b803d38735f6adbf9b9f42c95b7083287721410d5147f64b76887401d015dff1",
+      "bytes": 65369
+    },
+    "gpv-all-tomorrow.png": {
+      "sha256": "a9362cf43738e27eab53da9d281b7d9e478de5b1fc0c9c00be27a97b5da04c71",
+      "bytes": 28559
+    }
+  }
+}
