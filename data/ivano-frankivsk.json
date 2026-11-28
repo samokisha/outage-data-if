@@ -1,7 +1,7 @@
 {
   "regionId": "ivano-frankivsk",
   "regionAffiliation": "Івано-Франківська область",
-  "lastUpdated": "2026-11-28T07:00:51.103Z",
+  "lastUpdated": "2026-11-28T07:20:54.401Z",
   "fact": {
     "data": {
       "1795816800": {
@@ -16,8 +16,8 @@
           "8": "yes",
           "9": "yes",
           "10": "yes",
-          "11": "yes",
-          "12": "yes",
+          "11": "no",
+          "12": "no",
           "13": "yes",
           "14": "yes",
           "15": "yes",
@@ -319,7 +319,7 @@
         }
       }
     },
-    "update": "28.11.2026 08:52",
+    "update": "28.11.2026 09:18",
     "today": 1795816800
   },
   "preset": {
@@ -487,18 +487,18 @@
       "msecond": "Світла можливо не буде другі 30 хв"
     },
     "data": {},
-    "updateFact": "28.11.2026 08:52"
+    "updateFact": "28.11.2026 09:18"
   },
   "lastUpdateStatus": {
     "status": "parsed",
     "ok": true,
     "code": 200,
     "message": null,
-    "at": "2026-11-28T07:00:51.103Z",
-    "attempt": 84
+    "at": "2026-11-28T07:20:54.401Z",
+    "attempt": 85
   },
   "meta": {
     "schemaVersion": "1.0.0",
-    "contentHash": "9ac8be9cdc1c76b44bfd91795907d23a22e35808571cb7be589f34a47b05971c"
+    "contentHash": "4c7b95fdb364f57f6dd7c36bcab92fd2027574f8158f4c85c44016f75e10ed34"
   }
 }
